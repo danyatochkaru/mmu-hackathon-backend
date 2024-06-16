@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partners",
+  "info": {
+    "singularName": "partner",
+    "pluralName": "partners",
+    "displayName": "Partner"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_name": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "contact_name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "telegram": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

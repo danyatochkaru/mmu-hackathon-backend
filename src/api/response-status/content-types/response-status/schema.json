@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "response_statuses",
+  "info": {
+    "singularName": "response-status",
+    "pluralName": "response-statuses",
+    "displayName": "Response Status",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "response_status": {
+      "type": "enumeration",
+      "enum": [
+        "на рассмотрении",
+        "приглашён на собеседование",
+        "принят",
+        "отказано"
+      ],
+      "required": true
+    },
+    "responses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::response.response",
+      "mappedBy": "response_status"
+    }
+  }
+}

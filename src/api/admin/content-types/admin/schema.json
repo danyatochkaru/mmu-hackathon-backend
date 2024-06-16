@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admins",
+  "info": {
+    "singularName": "admin",
+    "pluralName": "admins",
+    "displayName": "Admin"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "admin_action": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::admin-action.admin-action",
+      "inversedBy": "admins"
+    }
+  }
+}

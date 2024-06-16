@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admin_actions",
+  "info": {
+    "singularName": "admin-action",
+    "pluralName": "admin-actions",
+    "displayName": "Admin Action",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "action_date": {
+      "type": "date",
+      "required": true
+    },
+    "action": {
+      "type": "enumeration",
+      "enum": [
+        "одобрено",
+        "отменено",
+        "блокировано"
+      ],
+      "required": true
+    },
+    "admins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::admin.admin",
+      "mappedBy": "admin_action"
+    }
+  }
+}

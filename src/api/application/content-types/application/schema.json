@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applications",
+  "info": {
+    "singularName": "application",
+    "pluralName": "applications",
+    "displayName": "Application",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "application_type": {
+      "type": "enumeration",
+      "enum": [
+        "практика",
+        "стажировка"
+      ],
+      "required": true
+    },
+    "group": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::group.group",
+      "inversedBy": "applications"
+    },
+    "task_description": {
+      "type": "text",
+      "required": true
+    },
+    "requirements": {
+      "type": "text",
+      "required": true
+    },
+    "number_of_students": {
+      "type": "integer",
+      "required": true
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "paid_internship": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "results": {
+      "type": "text",
+      "required": false
+    },
+    "status": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::status.status",
+      "inversedBy": "applications"
+    }
+  }
+}
