@@ -4,7 +4,8 @@
   "info": {
     "singularName": "group",
     "pluralName": "groups",
-    "displayName": "Group"
+    "displayName": "Group",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,21 +17,17 @@
       "required": true,
       "unique": true
     },
-    "degree_program": {
-      "type": "string",
-      "required": true
-    },
     "students": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::student.student",
       "mappedBy": "group"
     },
-    "applications": {
+    "direction": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::application.application",
-      "mappedBy": "group"
+      "relation": "manyToOne",
+      "target": "api::direction.direction",
+      "inversedBy": "groups"
     }
   }
 }

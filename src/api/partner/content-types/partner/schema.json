@@ -4,7 +4,8 @@
   "info": {
     "singularName": "partner",
     "pluralName": "partners",
-    "displayName": "Partner"
+    "displayName": "Partner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,18 +17,9 @@
       "unique": false,
       "required": true
     },
-    "contact_name": {
-      "type": "string",
-      "required": true
-    },
     "position": {
       "type": "string",
       "required": true
-    },
-    "email": {
-      "type": "string",
-      "required": true,
-      "unique": true
     },
     "phone_number": {
       "type": "string",
@@ -37,6 +29,18 @@
     "telegram": {
       "type": "string",
       "unique": true
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::application.application",
+      "mappedBy": "partner"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "partner"
     }
   }
 }

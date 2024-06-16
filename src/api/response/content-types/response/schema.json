@@ -20,9 +20,6 @@
         "files"
       ]
     },
-    "response_date": {
-      "type": "date"
-    },
     "response_status": {
       "type": "relation",
       "relation": "manyToOne",

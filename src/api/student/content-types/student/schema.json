@@ -12,21 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "full_name": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "email": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
-    "phone_number": {
-      "type": "string",
-      "required": false,
-      "unique": true
-    },
     "group": {
       "type": "relation",
       "relation": "manyToOne",
@@ -38,6 +23,12 @@
       "relation": "oneToMany",
       "target": "api::response.response",
       "mappedBy": "student"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "student"
     }
   }
 }

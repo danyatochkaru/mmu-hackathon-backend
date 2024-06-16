@@ -20,12 +20,6 @@
       ],
       "required": true
     },
-    "group": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::group.group",
-      "inversedBy": "applications"
-    },
     "task_description": {
       "type": "text",
       "required": true
@@ -57,6 +51,18 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::status.status",
+      "inversedBy": "applications"
+    },
+    "direction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direction.direction",
+      "inversedBy": "applications"
+    },
+    "partner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::partner.partner",
       "inversedBy": "applications"
     }
   }
