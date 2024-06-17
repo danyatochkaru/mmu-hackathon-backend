@@ -31,6 +31,12 @@
       "relation": "manyToOne",
       "target": "api::student.student",
       "inversedBy": "responses"
+    },
+    "application": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::application.application",
+      "inversedBy": "responses"
     }
   }
 }

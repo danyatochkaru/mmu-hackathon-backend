@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rops",
+  "info": {
+    "singularName": "rop",
+    "pluralName": "rops",
+    "displayName": "Rop",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "direction": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::direction.direction",
+      "inversedBy": "rops"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "rop"
+    }
+  }
+}

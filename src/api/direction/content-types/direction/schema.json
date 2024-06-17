@@ -28,6 +28,18 @@
       "relation": "oneToMany",
       "target": "api::application.application",
       "mappedBy": "direction"
+    },
+    "rops": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::rop.rop",
+      "mappedBy": "direction"
+    },
+    "practice_start": {
+      "type": "date"
+    },
+    "practice_end": {
+      "type": "date"
     }
   }
 }

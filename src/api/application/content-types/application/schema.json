@@ -64,6 +64,12 @@
       "relation": "manyToOne",
       "target": "api::partner.partner",
       "inversedBy": "applications"
+    },
+    "responses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::response.response",
+      "mappedBy": "application"
     }
   }
 }
