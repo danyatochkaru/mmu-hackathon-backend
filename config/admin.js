@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-  url: '/srtapi/admin',
+  url: '/strapi/admin',
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
   },
